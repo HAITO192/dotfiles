@@ -117,3 +117,9 @@ if ! shopt -oq posix; then
 fi
 alias dc='cd'
 export PS1="\[\e[1;32m\]\u\[\e[0m\]@\[\e[1;33m\]\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]\$ "
+
+pidwait(){
+	while kill -0 $1 2>/dev/null; do
+		sleep 1
+	done
+}
