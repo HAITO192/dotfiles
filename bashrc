@@ -123,3 +123,5 @@ pidwait(){
 		sleep 1
 	done
 }
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
